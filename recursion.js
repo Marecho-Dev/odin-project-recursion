@@ -13,3 +13,13 @@ function fibs(x) {
 console.log(fibs(8));
 
 //Fibonacci Sequence using recursion
+
+const fibsRec = (n) => {
+  if (n == 0) return [0];
+  if (n == 1) return [0, 1];
+  const a = fibsRec(n - 1);
+  a.push(a[n - 1] + a[n - 2]);
+  return a;
+};
+
+console.log(fibsRec(8));
